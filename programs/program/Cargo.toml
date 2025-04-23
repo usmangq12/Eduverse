@@ -1,0 +1,24 @@
+[package]
+name = "eduverse-programs"
+version = "0.0.0"
+edition = "2021"
+readme = "./README.md"
+license-file = "../LICENSE"
+publish = false
+
+[package.metadata.solana]
+program-id = "9syPYFiA6xFe4aUdgsJ4UUEmRimVryRBmXVienZQBJT5"
+program-dependencies = []
+account-dependencies = []
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.31.1"
+solana-program = "~2.1"

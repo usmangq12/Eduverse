@@ -1,0 +1,49 @@
+# =====================
+# Node / Next.js
+# =====================
+node_modules/
+.next/
+out/
+dist/
+.env*
+.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# If you're using yarn workspaces
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.yarnrc.yml
+
+# Turborepo
+turbo/
+.cache/
+
+# Optional: OS generated
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# IDEs
+.idea/
+.vscode/
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Coverage (if using testing tools)
+coverage/
+*.lcov
+
+# Optional: ignore built SDK if generated
+packages/sdk/generated/
