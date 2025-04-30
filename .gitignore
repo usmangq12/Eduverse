@@ -47,3 +47,7 @@ coverage/
 
 # Optional: ignore built SDK if generated
 packages/sdk/generated/
+
+programs/node_modules
+programs/target
+programs/test-ledger
