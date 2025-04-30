@@ -1,9 +1,9 @@
 use anchor_lang::prelude::*;
 
-declare_id!("9WWxeF1Emr5qfwdwxBa9NCbTawZSf773Ld2PLJf4U33E");
+declare_id!("6eV3UZFd9oRyUhvMu6CQ6xt9PiVLzrRvU1ZsLtqLjbJp");
 
 #[program]
-pub mod solana_project {
+pub mod anchor_program {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
