@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image"
 
 export default function StartTeaching() {
   return (
@@ -311,7 +312,7 @@ export default function StartTeaching() {
                     </ul>
                   </div>
                   <div className="rounded-lg overflow-hidden">
-                    <img src="/creation.webp" alt="Course Creation Tools" className="w-full h-auto" />
+                    <Image src="/creation.webp" alt="Course Creation Tools" className="w-full h-auto" />
                   </div>
                 </div>
               </CardContent>

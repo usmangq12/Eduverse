@@ -30,6 +30,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -334,7 +335,7 @@ export default function Home() {
                 className="overflow-hidden border-gray-200 shadow-sm hover:shadow-md transition-shadow pt-0"
               >
                 <div className=" w-full bg-gray-100">
-                  <img
+                  <Image
                     src={
                       course.image ||
                       "/placeholder.svg?height=200&width=400&query=blockchain course"
@@ -582,7 +583,7 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-emerald-200 to-emerald-100 opacity-50 blur-xl"></div>
               <div className="relative rounded-2xl overflow-hidden">
-                <img
+                <Image
                   src="/blockchain-meetup.png"
                   alt="Blockchain Community"
                   className="w-full h-auto"
