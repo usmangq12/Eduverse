@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image"
 
 export default function StartTeaching() {
   return (
@@ -90,7 +91,7 @@ export default function StartTeaching() {
                   <Label htmlFor="course-idea">Course Idea</Label>
                   <Textarea
                     id="course-idea"
-                    placeholder="Briefly describe the course you'd like to create"
+                    placeholder="Briefly describe the course you&apos;d like to create"
                     className="min-h-[120px]"
                   />
                 </div>
@@ -194,7 +195,7 @@ export default function StartTeaching() {
             </CardContent>
             <CardFooter>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/design3/dashboard">View Teacher Dashboard Demo</Link>
+                <Link href="/dashboard">View Teacher Dashboard Demo</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -206,9 +207,9 @@ export default function StartTeaching() {
 
         <Tabs defaultValue="earnings" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="earnings">Earnings Potential</TabsTrigger>
-            <TabsTrigger value="tools">Teaching Tools</TabsTrigger>
-            <TabsTrigger value="support">Support System</TabsTrigger>
+            <TabsTrigger value="earnings" className="hover:cursor-pointer">Earnings Potential</TabsTrigger>
+            <TabsTrigger value="tools" className="hover:cursor-pointer">Teaching Tools</TabsTrigger>
+            <TabsTrigger value="support" className="hover:cursor-pointer">Support System</TabsTrigger>
           </TabsList>
 
           <TabsContent value="earnings">
@@ -289,7 +290,7 @@ export default function StartTeaching() {
                     <h3 className="text-xl font-bold mb-4">Powerful Teaching Tools</h3>
                     <p className="text-gray-600 mb-4">
                       Our platform provides everything you need to create engaging blockchain courses. From video
-                      hosting to interactive coding environments, we've got you covered.
+                      hosting to interactive coding environments, we&apos;ve got you covered.
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
@@ -311,21 +312,23 @@ export default function StartTeaching() {
                     </ul>
                   </div>
                   <div className="rounded-lg overflow-hidden">
-                    <img src="/course-creation-tools.png" alt="Course Creation Tools" className="w-full h-auto" />
+                    <Image src="/creation.webp" alt="Course Creation Tools"  width={0}
+                  height={0}
+                  sizes="100vw" />
                   </div>
                 </div>
               </CardContent>
             </Card>
           </TabsContent>
 
-          <TabsContent value="support">
+          <TabsContent value="support" >
             <Card>
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div>
                     <h3 className="text-xl font-bold mb-4">Teacher Support System</h3>
                     <p className="text-gray-600 mb-4">
-                      You're never alone on your teaching journey. Our dedicated support team and teacher community are
+                      You&apos;re never alone on your teaching journey. Our dedicated support team and teacher community are
                       here to help you succeed every step of the way.
                     </p>
                     <ul className="space-y-2">
@@ -357,8 +360,8 @@ export default function StartTeaching() {
                         <div>
                           <div className="font-medium">John Doe</div>
                           <p className="text-sm text-gray-600">
-                            "The teacher community has been invaluable. I got feedback on my course outline that really
-                            improved my content."
+                             &quot;The teacher community has been invaluable. I got feedback on my course outline that really
+                            improved my content. &quot;
                           </p>
                         </div>
                       </div>
@@ -369,8 +372,8 @@ export default function StartTeaching() {
                         <div>
                           <div className="font-medium">Alice Smith</div>
                           <p className="text-sm text-gray-600">
-                            "My success manager helped me optimize my course pricing, which increased my revenue by
-                            40%!"
+                          &quot;My success manager helped me optimize my course pricing, which increased my revenue by
+                            40%!&quot;
                           </p>
                         </div>
                       </div>

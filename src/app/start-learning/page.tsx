@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import Image from "next/image";
 
 export default function StartLearning() {
   return (
@@ -425,13 +426,15 @@ export default function StartLearning() {
               className="overflow-hidden border-gray-200 shadow-sm hover:shadow-md transition-shadow pt-0"
             >
               <div className=" w-full bg-gray-100">
-                <img
+                <Image
                   src={
                     path.image ||
                     "/placeholder.svg?height=200&width=400&query=learning path"
                   }
                   alt={path.title}
-                  className="w-full h-56 object-cover"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
                 />
               </div>
               <CardHeader>

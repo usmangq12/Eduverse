@@ -30,6 +30,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -71,8 +72,12 @@ export default function Home() {
               <div className="relative rounded-2xl bg-white border border-gray-200 shadow-lg p-8">
                 <Tabs defaultValue="teach" className="w-full">
                   <TabsList className="grid w-full grid-cols-2 mb-6">
-                    <TabsTrigger value="teach" className="hover:cursor-pointer">For Teachers</TabsTrigger>
-                    <TabsTrigger value="learn" className="hover:cursor-pointer">For Students</TabsTrigger>
+                    <TabsTrigger value="teach" className="hover:cursor-pointer">
+                      For Teachers
+                    </TabsTrigger>
+                    <TabsTrigger value="learn" className="hover:cursor-pointer">
+                      For Students
+                    </TabsTrigger>
                   </TabsList>
                   <TabsContent value="teach" className="space-y-4">
                     <div className="flex items-center gap-3">
@@ -330,13 +335,18 @@ export default function Home() {
                 className="overflow-hidden border-gray-200 shadow-sm hover:shadow-md transition-shadow pt-0"
               >
                 <div className=" w-full bg-gray-100">
-                  <img
+                  <Image
+
                     src={
                       course.image ||
                       "/placeholder.svg?height=200&width=400&query=blockchain course"
                     }
                     alt={course.title}
                     className="w-full h-56 object-cover "
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                  
                   />
                 </div>
                 <CardHeader>
@@ -497,7 +507,7 @@ export default function Home() {
                       ))}
                     </div>
                     <p className="text-gray-600 mb-4">
-                      "{testimonial.content}"
+                      &quot;{testimonial.content} &quot;
                     </p>
                     <h4 className="font-medium">{testimonial.name}</h4>
                     <p className="text-sm text-gray-500">{testimonial.role}</p>
@@ -578,10 +588,14 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-emerald-200 to-emerald-100 opacity-50 blur-xl"></div>
               <div className="relative rounded-2xl overflow-hidden">
-                <img
+                <Image
                   src="/blockchain-meetup.png"
                   alt="Blockchain Community"
                   className="w-full h-auto"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+               
                 />
               </div>
             </div>
@@ -615,7 +629,7 @@ export default function Home() {
                   Getting started is easy! Simply create an account, connect
                   your Solana wallet, browse our course catalog, and enroll in
                   any course that interests you. You can pay with SOL or other
-                  supported cryptocurrencies. Once enrolled, you'll have
+                  supported cryptocurrencies. Once enrolled, you&apos;ll have
                   immediate access to all course materials.
                 </AccordionContent>
               </AccordionItem>
@@ -627,11 +641,11 @@ export default function Home() {
                   How do I become a teacher on the platform?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
-                  To become a teacher, you'll need to apply through our teacher
-                  application process. We review your expertise, experience, and
-                  proposed course outline. Once approved, you'll gain access to
-                  our course creation tools where you can upload videos,
-                  assignments, and other learning materials.
+                  To become a teacher, you&apos;ll need to apply through our
+                  teacher application process. We review your expertise,
+                  experience, and proposed course outline. Once approved,
+                  you&apos;ll gain access to our course creation tools where you
+                  can upload videos, assignments, and other learning materials.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem
@@ -642,13 +656,13 @@ export default function Home() {
                   What are NFT certificates and how do they work?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
-                  When you complete a course, you'll receive an NFT certificate
-                  on the Solana blockchain. This certificate is a verifiable
-                  credential that proves your completion and skills. You can
-                  display it on your profile, share it with employers, or use it
-                  as proof of your blockchain education. Each certificate
-                  contains metadata about the course, your performance, and
-                  completion date.
+                  When you complete a course, you&apos;ll receive an NFT
+                  certificate on the Solana blockchain. This certificate is a
+                  verifiable credential that proves your completion and skills.
+                  You can display it on your profile, share it with employers,
+                  or use it as proof of your blockchain education. Each
+                  certificate contains metadata about the course, your
+                  performance, and completion date.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem
@@ -679,8 +693,8 @@ export default function Home() {
                   complete beginners to advanced developers. Each course clearly
                   indicates the prerequisite knowledge required, and many of our
                   introductory courses assume no prior blockchain experience.
-                    You'll find learning paths that guide you from the basics to
-                  advanced topics.
+                  You&apos;ll find learning paths that guide you from the basics
+                  to advanced topics.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
