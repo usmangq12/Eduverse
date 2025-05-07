@@ -13,7 +13,7 @@ export default function Design3Courses() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">My Courses</h1>
-          <p className="text-gray-600">Courses you're enrolled in</p>
+          <p className="text-gray-600">Courses you&apos;re enrolled in</p>
         </div>
         <div className="flex gap-2">
           <div className="relative flex-1">
