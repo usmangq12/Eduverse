@@ -312,7 +312,9 @@ export default function StartTeaching() {
                     </ul>
                   </div>
                   <div className="rounded-lg overflow-hidden">
-                    <Image src="/creation.webp" alt="Course Creation Tools" className="w-full h-auto" />
+                    <Image src="/creation.webp" alt="Course Creation Tools"  width={0}
+                  height={0}
+                  sizes="100vw" />
                   </div>
                 </div>
               </CardContent>

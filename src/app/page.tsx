@@ -336,12 +336,17 @@ export default function Home() {
               >
                 <div className=" w-full bg-gray-100">
                   <Image
+
                     src={
                       course.image ||
                       "/placeholder.svg?height=200&width=400&query=blockchain course"
                     }
                     alt={course.title}
                     className="w-full h-56 object-cover "
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                  
                   />
                 </div>
                 <CardHeader>
@@ -587,6 +592,10 @@ export default function Home() {
                   src="/blockchain-meetup.png"
                   alt="Blockchain Community"
                   className="w-full h-auto"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+               
                 />
               </div>
             </div>

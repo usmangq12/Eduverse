@@ -310,7 +310,7 @@ export default function StartLearning() {
                 className="overflow-hidden border-gray-200 shadow-sm hover:shadow-md transition-shadow pt-0"
               >
                 <div className=" w-full bg-gray-100 relative">
-                  <Image
+                  <img
                     src={
                       course.image ||
                       "/placeholder.svg?height=200&width=400&query=blockchain"
@@ -432,7 +432,9 @@ export default function StartLearning() {
                     "/placeholder.svg?height=200&width=400&query=learning path"
                   }
                   alt={path.title}
-                  className="w-full h-56 object-cover"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
                 />
               </div>
               <CardHeader>
@@ -508,7 +510,7 @@ export default function StartLearning() {
               className="overflow-hidden border-gray-200 shadow-sm hover:shadow-md transition-shadow pt-0"
             >
               <div className=" w-full bg-gray-100">
-                <Image
+                <img
                   src={
                     course.image ||
                     "/placeholder.svg?height=200&width=400&query=blockchain course"
@@ -715,7 +717,7 @@ export default function StartLearning() {
           <div className="relative flex-1 flex min-h-full" dir="rtl">
             <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-emerald-200 to-emerald-100 opacity-50 blur-xl min-h-full"></div>
             <div className="relative rounded-lg md:rounded-s-lg overflow-hidden min-h-full  shrink">
-              <Image
+              <img
                 src="/blockchain-meetup.png"
                 alt="Student learning blockchain"
                 className="w-full min-h-full"
