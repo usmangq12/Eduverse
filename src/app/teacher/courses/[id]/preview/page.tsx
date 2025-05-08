@@ -125,11 +125,11 @@ export default function CoursePreview() {
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Understand Solana's architecture</span>
+                    <span>Understand Solan&apos;s architecture</span>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Deploy and test on Solana's network</span>
+                    <span>Deploy and test on Solana&apos;s network</span>
                   </div>
                 </div>
               </div>
@@ -353,12 +353,12 @@ export default function CoursePreview() {
             <h2 className="text-xl font-semibold mb-4">Course Overview</h2>
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-medium mb-2">What You'll Learn</h3>
+                <h3 className="text-lg font-medium mb-2">What You&apos;ll Learn</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 shrink-0" />
                     <span>
-                      Understand Solana's unique architecture and consensus
+                      Understand Solana&apos;s unique architecture and consensus
                       mechanism
                     </span>
                   </div>
@@ -389,7 +389,7 @@ export default function CoursePreview() {
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 shrink-0" />
                     <span>
-                      Optimize programs for Solana's performance requirements
+                      Optimize programs for Solana&apos;s performance requirements
                     </span>
                   </div>
                 </div>
@@ -487,7 +487,7 @@ export default function CoursePreview() {
             <p className="text-gray-700 mb-4">
               Previously, Alex was the lead developer at BlockTech Solutions
               where he helped build enterprise blockchain solutions. He holds a
-              Master's degree in Computer Science and is an active contributor
+              Master&apos;s degree in Computer Science and is an active contributor
               to several open-source blockchain projects.
             </p>
             <p className="text-gray-700">
@@ -579,7 +579,7 @@ export default function CoursePreview() {
                     </div>
                     <p className="text-gray-700">
                       This course exceeded my expectations! The instructor
-                      explains complex Solana concepts in a way that's easy to
+                      explains complex Solana concepts in a way that&apos;s easy to
                       understand. I was able to deploy my first smart contract
                       within a week of starting the course.
                     </p>

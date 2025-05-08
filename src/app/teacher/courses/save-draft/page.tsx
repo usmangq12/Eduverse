@@ -84,7 +84,7 @@ export default function SaveDraft() {
 
         <Card>
           <CardHeader>
-            <CardTitle>What's Next?</CardTitle>
+            <CardTitle>What&apos;s Next?</CardTitle>
             <CardDescription>Complete these steps to publish your course</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">

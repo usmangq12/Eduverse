@@ -115,8 +115,8 @@ export default function AddSection() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="1">1 - First section</SelectItem>
-                    <SelectItem value="2">2 - After "Introduction to Solana"</SelectItem>
-                    <SelectItem value="3">3 - After "Smart Contract Basics"</SelectItem>
+                    <SelectItem value="2">2 - After   &quot;Introduction to Solana &quot;</SelectItem>
+                    <SelectItem value="3">3 - After   &quot;Smart Contract Basics &quot;</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

@@ -35,7 +35,7 @@ export default function PaymentConfirmation() {
           <CheckCircle className="h-8 w-8 text-emerald-600" />
         </div>
         <h1 className="text-3xl font-bold">Payment Successful!</h1>
-        <p className="text-gray-500 mt-2">You've successfully enrolled in {transaction.courseTitle}</p>
+        <p className="text-gray-500 mt-2">You&apos;ve successfully enrolled in {transaction.courseTitle}</p>
       </div>
 
       <Card className="mb-8">
@@ -191,7 +191,7 @@ export default function PaymentConfirmation() {
             <div>
               <p className="font-medium">Get Certified</p>
               <p className="text-sm text-gray-500">
-                Upon course completion, you'll receive an NFT certificate that verifies your knowledge.
+                Upon course completion, you&apos;ll receive an NFT certificate that verifies your knowledge.
               </p>
             </div>
           </li>

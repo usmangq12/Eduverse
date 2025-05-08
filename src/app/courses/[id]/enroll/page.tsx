@@ -107,7 +107,7 @@ import {
   
                 <div className="grid gap-6 md:grid-cols-2">
                   <div className="space-y-4">
-                    <h3 className="text-lg font-medium">What You'll Learn</h3>
+                    <h3 className="text-lg font-medium">What You&apos;ll Learn</h3>
                     <ul className="space-y-2">
                       {course.whatYouWillLearn.map((item, i) => (
                         <li key={i} className="flex items-start gap-2">
@@ -167,7 +167,7 @@ import {
               <Card>
                 <CardHeader>
                   <CardTitle>Enrollment Options</CardTitle>
-                  <CardDescription>Choose how you'd like to enroll</CardDescription>
+                  <CardDescription>Choose how you&apos;d like to enroll</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <Tabs defaultValue="fiat">

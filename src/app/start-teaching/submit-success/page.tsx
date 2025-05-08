@@ -13,7 +13,7 @@ export default function SubmitSuccess() {
         </div>
         <h1 className="text-3xl font-bold mb-4">Application Submitted Successfully!</h1>
         <p className="text-gray-600">
-          Thank you for applying to become a teacher on our platform. We've received your application and will review it
+          Thank you for applying to become a teacher on our platform. We&apos;ve received your application and will review it
           shortly.
         </p>
       </div>
@@ -21,7 +21,7 @@ export default function SubmitSuccess() {
       <Card className="max-w-2xl mx-auto">
         <CardHeader>
           <CardTitle>What Happens Next?</CardTitle>
-          <CardDescription>Here's what you can expect from the application process</CardDescription>
+          <CardDescription>Here&apos;s what you can expect from the application process</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
@@ -32,7 +32,7 @@ export default function SubmitSuccess() {
               <div>
                 <h3 className="font-medium text-lg mb-1">Application Review</h3>
                 <p className="text-gray-600">
-                  Our team will review your application within 3-5 business days. We'll evaluate your expertise,
+                  Our team will review your application within 3-5 business days. We&apos;ll evaluate your expertise,
                   experience, and proposed course idea.
                 </p>
               </div>
@@ -45,7 +45,7 @@ export default function SubmitSuccess() {
               <div>
                 <h3 className="font-medium text-lg mb-1">Email Confirmation</h3>
                 <p className="text-gray-600">
-                  You'll receive an email notification about your application status. If approved, you'll get access to
+                  You&apos;ll receive an email notification about your application status. If approved, you&apos;ll get access to
                   our teacher dashboard and course creation tools.
                 </p>
               </div>
@@ -58,7 +58,7 @@ export default function SubmitSuccess() {
               <div>
                 <h3 className="font-medium text-lg mb-1">Onboarding Call</h3>
                 <p className="text-gray-600">
-                  Once approved, we'll schedule a brief onboarding call to walk you through our platform, answer any
+                  Once approved, we&apos;ll schedule a brief onboarding call to walk you through our platform, answer any
                   questions, and help you get started with creating your first course.
                 </p>
               </div>

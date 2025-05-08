@@ -500,7 +500,7 @@ export default function TeacherDashboard() {
                   New Course Creation Tools Available
                 </div>
                 <p className="text-sm text-gray-600 mb-2">
-                  We've added new interactive quiz features and code playgrounds
+                  We&apos;ve added new interactive quiz features and code playgrounds
                   to help make your courses more engaging.
                 </p>
                 <div className="text-xs text-gray-500">Posted 3 days ago</div>
