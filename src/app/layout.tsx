@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { AppProviders } from "@/components/app-providers";
-import { AppLayout } from "@/components/app-layout";
-import React from "react";
+import type { Metadata } from 'next'
+import './globals.css'
+import "@wallet-ui/tailwind/index.css";
+
+import { AppProviders } from '@/components/app-providers'
+import { AppLayout } from '@/components/app-layout'
+import React from 'react'
+import "@solana/wallet-adapter-react-ui/styles.css";
 
 export const metadata: Metadata = {
   title: "Placeholder",
@@ -17,7 +20,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased`}>
         <AppProviders>
-          <AppLayout >{children}</AppLayout>
+          <AppLayout >
+          
+            {children}
+           
+            </AppLayout>
         </AppProviders>
       </body>
     </html>

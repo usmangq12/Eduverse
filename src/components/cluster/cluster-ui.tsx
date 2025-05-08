@@ -32,6 +32,10 @@ export function ClusterChecker({ children }: { children: ReactNode }) {
   const { client } = useWalletUi()
   const { cluster } = useWalletUiCluster()
 
+  if (!cluster || !cluster.urlOrMoniker) {
+    return null 
+  }
+
   const query = useQuery({
     queryKey: ['version', { cluster, endpoint: cluster.urlOrMoniker }],
     queryFn: () => client.rpc.getVersion(),
