@@ -460,21 +460,21 @@ export default function Home() {
                 role: "Software Developer",
                 content:
                   "The Solana Fundamentals course was exactly what I needed to transition into blockchain development. The instructor was knowledgeable and the hands-on projects were invaluable.",
-                avatar: "/diverse-group-city.png",
+                avatar: "",
               },
               {
                 name: "Sarah Chen",
                 role: "Blockchain Entrepreneur",
                 content:
                   "As someone building a DeFi startup, the Smart Contract Development course gave me the technical foundation I needed. The NFT certificate was a nice bonus that I proudly display on my profile.",
-                avatar: "/contemplative-artist.png",
+                avatar: "",
               },
               {
                 name: "Michael Rodriguez",
                 role: "Web3 Instructor",
                 content:
                   "Teaching on this platform has been rewarding both financially and professionally. The tools for course creation are intuitive, and the payment system is seamless with instant crypto transfers.",
-                avatar: "/contemplative-man.png",
+                avatar: "",
               },
             ].map((testimonial, i) => (
               <Card

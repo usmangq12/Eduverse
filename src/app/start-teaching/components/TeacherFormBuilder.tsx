@@ -17,12 +17,13 @@ import { useForm } from "react-hook-form";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useRouter } from "next/navigation";
+import { Routes } from "@/lib/routes";
 
 const formSchema = z.object({
   firstname: z.string().min(2, {
@@ -35,12 +36,8 @@ const formSchema = z.object({
     .string()
     .min(1, { message: "This field has to be filled." })
     .email("This is not a valid email."),
-  price: z
-    .number({
-      required_error: "Price is required",
-    })
-    .gt(0, "Price should be greater than 0")
-    .positive("Price should be positive"),
+  price: z.string().min(1, "Price Required"),
+
   experience: z.string().min(1, "Experience Required").max(500, {
     message: "Experience must not exceed 500 characters.",
   }),
@@ -56,14 +53,15 @@ export const TeacherFormBuilder = () => {
       firstname: "",
       lastname: "",
       email: "",
-      price: 0,
+      price: "",
       experience: "",
       courseIdea: "",
     },
   });
-
+  const router = useRouter();
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    router.push(Routes.SubmitSuccess);
   }
 
   return (
@@ -110,6 +108,20 @@ export const TeacherFormBuilder = () => {
                 )}
               />
             </div>
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Enter your email " min={0} {...field} />
+                  </FormControl>
+
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             <FormField
               control={form.control}
@@ -120,7 +132,6 @@ export const TeacherFormBuilder = () => {
                   <FormControl>
                     <Input
                       placeholder="Enter course price "
-                      type="number"
                       min={0}
                       {...field}
                     />
@@ -169,7 +180,7 @@ export const TeacherFormBuilder = () => {
             />
             <Button
               className="bg-emerald-600 hover:bg-emerald-700 text-white self-end "
-              type="submit"
+              // type="submit"
             >
               Submit
             </Button>
