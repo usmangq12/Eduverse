@@ -242,7 +242,7 @@ export default function Design3Dashboard() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="text-gray-500 mb-2">Total Earnings</div>
-                    <div className="text-3xl font-bold">$12,450</div>
+                    <div className="text-3xl font-bold dark:text-gray-600">$12,450</div>
                     <div className="mt-4 text-sm text-gray-500">
                       From 1,248 course sales
                     </div>
@@ -251,7 +251,7 @@ export default function Design3Dashboard() {
                     <div className="text-gray-500 mb-2">
                       Available for Withdrawal
                     </div>
-                    <div className="text-3xl font-bold">$8,320</div>
+                    <div className="text-3xl font-bold dark:text-gray-600">$8,320</div>
                     <div className="mt-4">
                       <Button
                         size="sm"

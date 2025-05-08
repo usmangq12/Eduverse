@@ -38,7 +38,7 @@ export default function StartLearning() {
   return (
     <div className=" px-4 pt-12">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Explore Courses</h1>
+        <h1 className="text-3xl font-bold mb-2 dark:text-gray-600">Explore Courses</h1>
         <p className="text-gray-600">
           Find the perfect blockchain course to advance your skills
         </p>
@@ -176,8 +176,8 @@ export default function StartLearning() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
             <div className="flex items-center gap-2">
               <span className="text-gray-600">Sort by:</span>
-              <Select defaultValue="popular">
-                <SelectTrigger className="w-[180px] hover:cursor-pointer">
+              <Select defaultValue="popular" >
+                <SelectTrigger className="w-[180px] hover:cursor-pointer dark:text-gray-600">
                   <SelectValue placeholder="Sort by" />
                 </SelectTrigger>
                 <SelectContent>
@@ -348,7 +348,7 @@ export default function StartLearning() {
                       <span>{course.rating}</span>
                     </div>
                   </div>
-                  <Badge variant="outline" className="bg-gray-50">
+                  <Badge variant="outline" className="bg-gray-50 dark:text-gray-600">
                     {course.level}
                   </Badge>
                 </CardContent>
@@ -387,7 +387,7 @@ export default function StartLearning() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Learning Paths</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">Learning Paths</h2>
         <p className="text-gray-600 mb-8 max-w-3xl">
           Not sure where to start? Our curated learning paths guide you from
           beginner to expert in specific blockchain domains.
@@ -468,7 +468,7 @@ export default function StartLearning() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Recommended For You</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">Recommended For You</h2>
         <p className="text-gray-600 mb-8 max-w-3xl">
           Based on your interests and browsing history, we think you might like
           these courses.
@@ -542,7 +542,7 @@ export default function StartLearning() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Getting Started</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">Getting Started</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <Card>
             <CardHeader>
@@ -671,7 +671,7 @@ export default function StartLearning() {
       <div className="mt-16 bg-emerald-50  rounded-lg">
         <div className="flex gap-8 items-stretch flex-col md:flex-row h-full">
           <div className="flex-1 p-8  h-full">
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4 dark:text-gray-600">
               Ready to Start Learning?
             </h2>
             <p className="text-gray-600 mb-6">

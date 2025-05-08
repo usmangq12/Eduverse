@@ -1,21 +1,37 @@
-import { ArrowRight, CheckCircle, Upload, Wallet, Users, MessageSquare } from "lucide-react"
-import Link from "next/link"
+import {
+  ArrowRight,
+  CheckCircle,
+  Upload,
+  Wallet,
+  Users,
+  MessageSquare,
+} from "lucide-react";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
 
 export default function StartTeaching() {
   return (
     <div className="container px-4 py-12">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Become a Teacher</h1>
-        <p className="text-gray-600">Share your blockchain knowledge and earn crypto</p>
+        <h1 className="text-3xl font-bold mb-2 dark:text-gray-600">Become a Teacher</h1>
+        <p className="text-gray-600">
+          Share your blockchain knowledge and earn crypto
+        </p>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-3">
@@ -23,14 +39,19 @@ export default function StartTeaching() {
           <Card>
             <CardHeader>
               <CardTitle>Teacher Application</CardTitle>
-              <CardDescription>Tell us about yourself and your teaching experience</CardDescription>
+              <CardDescription>
+                Tell us about yourself and your teaching experience
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <form className="space-y-6">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="first-name">First name</Label>
-                    <Input id="first-name" placeholder="Enter your first name" />
+                    <Input
+                      id="first-name"
+                      placeholder="Enter your first name"
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="last-name">Last name</Label>
@@ -40,17 +61,27 @@ export default function StartTeaching() {
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="Enter your email" />
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="wallet">Solana Wallet Address</Label>
-                  <Input id="wallet" placeholder="Enter your Solana wallet address" />
+                  <Input
+                    id="wallet"
+                    placeholder="Enter your Solana wallet address"
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="expertise">Area of Expertise</Label>
-                  <RadioGroup defaultValue="solana" className="grid gap-4 sm:grid-cols-2">
+                  <RadioGroup
+                    defaultValue="solana"
+                    className="grid gap-4 sm:grid-cols-2"
+                  >
                     <div className="flex items-center space-x-2 rounded-md border p-3">
                       <RadioGroupItem value="solana" id="solana" />
                       <Label htmlFor="solana" className="flex-1 cursor-pointer">
@@ -58,8 +89,14 @@ export default function StartTeaching() {
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2 rounded-md border p-3">
-                      <RadioGroupItem value="smart-contracts" id="smart-contracts" />
-                      <Label htmlFor="smart-contracts" className="flex-1 cursor-pointer">
+                      <RadioGroupItem
+                        value="smart-contracts"
+                        id="smart-contracts"
+                      />
+                      <Label
+                        htmlFor="smart-contracts"
+                        className="flex-1 cursor-pointer"
+                      >
                         Smart Contracts
                       </Label>
                     </div>
@@ -91,13 +128,15 @@ export default function StartTeaching() {
                   <Label htmlFor="course-idea">Course Idea</Label>
                   <Textarea
                     id="course-idea"
-                    placeholder="Briefly describe the course you&apos;d like to create"
+                    placeholder="Briefly describe the course you'd like to create"
                     className="min-h-[120px]"
                   />
                 </div>
 
                 <div className="flex justify-end">
-                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Submit Application</Button>
+                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                    Submit Application
+                  </Button>
                 </div>
               </form>
             </CardContent>
@@ -108,7 +147,9 @@ export default function StartTeaching() {
           <Card>
             <CardHeader>
               <CardTitle>Why Teach With Us?</CardTitle>
-              <CardDescription>Benefits of becoming an instructor</CardDescription>
+              <CardDescription>
+                Benefits of becoming an instructor
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-start gap-3">
@@ -117,7 +158,9 @@ export default function StartTeaching() {
                 </div>
                 <div>
                   <h3 className="font-medium">Earn Crypto</h3>
-                  <p className="text-sm text-gray-600">Get paid in SOL for every student enrollment</p>
+                  <p className="text-sm text-gray-600">
+                    Get paid in SOL for every student enrollment
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -126,7 +169,9 @@ export default function StartTeaching() {
                 </div>
                 <div>
                   <h3 className="font-medium">Global Reach</h3>
-                  <p className="text-sm text-gray-600">Connect with students worldwide</p>
+                  <p className="text-sm text-gray-600">
+                    Connect with students worldwide
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -135,7 +180,9 @@ export default function StartTeaching() {
                 </div>
                 <div>
                   <h3 className="font-medium">Easy Course Creation</h3>
-                  <p className="text-sm text-gray-600">Intuitive tools to build and publish your courses</p>
+                  <p className="text-sm text-gray-600">
+                    Intuitive tools to build and publish your courses
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -144,7 +191,9 @@ export default function StartTeaching() {
                 </div>
                 <div>
                   <h3 className="font-medium">Community Support</h3>
-                  <p className="text-sm text-gray-600">Join our network of blockchain educators</p>
+                  <p className="text-sm text-gray-600">
+                    Join our network of blockchain educators
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -162,7 +211,9 @@ export default function StartTeaching() {
                 </div>
                 <div>
                   <h3 className="font-medium">Apply</h3>
-                  <p className="text-sm text-gray-600">Submit your application with your expertise and course idea</p>
+                  <p className="text-sm text-gray-600">
+                    Submit your application with your expertise and course idea
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -171,7 +222,9 @@ export default function StartTeaching() {
                 </div>
                 <div>
                   <h3 className="font-medium">Get Approved</h3>
-                  <p className="text-sm text-gray-600">Our team reviews your application within 3-5 business days</p>
+                  <p className="text-sm text-gray-600">
+                    Our team reviews your application within 3-5 business days
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -180,7 +233,9 @@ export default function StartTeaching() {
                 </div>
                 <div>
                   <h3 className="font-medium">Create Content</h3>
-                  <p className="text-sm text-gray-600">Build your course with our easy-to-use course builder</p>
+                  <p className="text-sm text-gray-600">
+                    Build your course with our easy-to-use course builder
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -189,7 +244,9 @@ export default function StartTeaching() {
                 </div>
                 <div>
                   <h3 className="font-medium">Launch & Earn</h3>
-                  <p className="text-sm text-gray-600">Publish your course and start earning crypto</p>
+                  <p className="text-sm text-gray-600">
+                    Publish your course and start earning crypto
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -203,13 +260,19 @@ export default function StartTeaching() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-bold mb-6">Teacher Success Stories</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">Teacher Success Stories</h2>
 
         <Tabs defaultValue="earnings" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="earnings" className="hover:cursor-pointer">Earnings Potential</TabsTrigger>
-            <TabsTrigger value="tools" className="hover:cursor-pointer">Teaching Tools</TabsTrigger>
-            <TabsTrigger value="support" className="hover:cursor-pointer">Support System</TabsTrigger>
+            <TabsTrigger value="earnings" className="hover:cursor-pointer">
+              Earnings Potential
+            </TabsTrigger>
+            <TabsTrigger value="tools" className="hover:cursor-pointer">
+              Teaching Tools
+            </TabsTrigger>
+            <TabsTrigger value="support" className="hover:cursor-pointer">
+              Support System
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="earnings">
@@ -217,10 +280,14 @@ export default function StartTeaching() {
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Maximize Your Earnings</h3>
+                    <h3 className="text-xl font-bold mb-4">
+                      Maximize Your Earnings
+                    </h3>
                     <p className="text-gray-600 mb-4">
-                      Our teachers earn an average of $2,000 per month from course sales. With our revenue share model,
-                      you keep 70-85% of all course sales, paid directly to your wallet in SOL.
+                      Our teachers earn an average of $2,000 per month from
+                      course sales. With our revenue share model, you keep
+                      70-85% of all course sales, paid directly to your wallet
+                      in SOL.
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
@@ -243,15 +310,21 @@ export default function StartTeaching() {
                   </div>
                   <div className="bg-emerald-50 p-6 rounded-lg">
                     <div className="text-center mb-6">
-                      <h4 className="text-lg font-medium mb-2">Average Monthly Earnings</h4>
-                      <div className="text-4xl font-bold text-emerald-600">$2,000</div>
-                      <p className="text-sm text-gray-500 mt-1">Based on teachers with 2+ courses</p>
+                      <h4 className="text-lg font-medium mb-2 dark:text-gray-600">
+                        Average Monthly Earnings
+                      </h4>
+                      <div className="text-4xl font-bold text-emerald-600">
+                        $2,000
+                      </div>
+                      <p className="text-sm text-gray-500 mt-1 dark:text-gray-600">
+                        Based on teachers with 2+ courses
+                      </p>
                     </div>
                     <div className="space-y-4">
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span>Beginner Teacher</span>
-                          <span>$500 - $1,000</span>
+                          <span className="dark:text-gray-600">Beginner Teacher</span>
+                          <span className="dark:text-gray-600">$500 - $1,000</span>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full">
                           <div className="h-2 bg-emerald-600 rounded-full w-1/4"></div>
@@ -259,8 +332,8 @@ export default function StartTeaching() {
                       </div>
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span>Established Teacher</span>
-                          <span>$1,000 - $3,000</span>
+                          <span className="dark:text-gray-600">Established Teacher</span>
+                          <span className="dark:text-gray-600">$1,000 - $3,000</span>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full">
                           <div className="h-2 bg-emerald-600 rounded-full w-1/2"></div>
@@ -268,8 +341,8 @@ export default function StartTeaching() {
                       </div>
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span>Top Teacher</span>
-                          <span>$3,000 - $10,000+</span>
+                          <span className="dark:text-gray-600">Top Teacher</span>
+                          <span className="dark:text-gray-600">$3,000 - $10,000+</span>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full">
                           <div className="h-2 bg-emerald-600 rounded-full w-3/4"></div>
@@ -287,10 +360,14 @@ export default function StartTeaching() {
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Powerful Teaching Tools</h3>
+                    <h3 className="text-xl font-bold mb-4">
+                      Powerful Teaching Tools
+                    </h3>
                     <p className="text-gray-600 mb-4">
-                      Our platform provides everything you need to create engaging blockchain courses. From video
-                      hosting to interactive coding environments, we&apos;ve got you covered.
+                      Our platform provides everything you need to create
+                      engaging blockchain courses. From video hosting to
+                      interactive coding environments, we&apos;ve got you
+                      covered.
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
@@ -299,7 +376,9 @@ export default function StartTeaching() {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>Interactive code playgrounds for Solana and Ethereum</span>
+                        <span>
+                          Interactive code playgrounds for Solana and Ethereum
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
@@ -312,24 +391,31 @@ export default function StartTeaching() {
                     </ul>
                   </div>
                   <div className="rounded-lg overflow-hidden">
-                    <Image src="/creation.webp" alt="Course Creation Tools"  width={0}
-                  height={0}
-                  sizes="100vw" />
+                    <Image
+                      src="/creation.webp"
+                      alt="Course Creation Tools"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                    />
                   </div>
                 </div>
               </CardContent>
             </Card>
           </TabsContent>
 
-          <TabsContent value="support" >
+          <TabsContent value="support">
             <Card>
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Teacher Support System</h3>
+                    <h3 className="text-xl font-bold mb-4">
+                      Teacher Support System
+                    </h3>
                     <p className="text-gray-600 mb-4">
-                      You&apos;re never alone on your teaching journey. Our dedicated support team and teacher community are
-                      here to help you succeed every step of the way.
+                      You&apos;re never alone on your teaching journey. Our
+                      dedicated support team and teacher community are here to
+                      help you succeed every step of the way.
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
@@ -351,28 +437,36 @@ export default function StartTeaching() {
                     </ul>
                   </div>
                   <div className="bg-emerald-50 p-6 rounded-lg">
-                    <h4 className="text-lg font-medium mb-4">Teacher Community</h4>
+                    <h4 className="text-lg font-medium mb-4 dark:text-gray-600">
+                      Teacher Community
+                    </h4>
                     <div className="space-y-4">
                       <div className="flex items-start gap-3 bg-white p-3 rounded-lg">
                         <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                          <span className="font-medium text-emerald-600">JD</span>
+                          <span className="font-medium text-emerald-600">
+                            JD
+                          </span>
                         </div>
-                        <div>
+                        <div className="flex-1">
                           <div className="font-medium">John Doe</div>
                           <p className="text-sm text-gray-600">
-                             &quot;The teacher community has been invaluable. I got feedback on my course outline that really
+                            &quot;The teacher community has been invaluable. I
+                            got feedback on my course outline that really
                             improved my content. &quot;
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3 bg-white p-3 rounded-lg">
                         <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                          <span className="font-medium text-emerald-600">AS</span>
+                          <span className="font-medium text-emerald-600">
+                            AS
+                          </span>
                         </div>
-                        <div>
+                        <div className="flex-1">
                           <div className="font-medium">Alice Smith</div>
                           <p className="text-sm text-gray-600">
-                          &quot;My success manager helped me optimize my course pricing, which increased my revenue by
+                            &quot;My success manager helped me optimize my
+                            course pricing, which increased my revenue by
                             40%!&quot;
                           </p>
                         </div>
@@ -387,15 +481,17 @@ export default function StartTeaching() {
       </div>
 
       <div className="mt-12 text-center">
-        <h2 className="text-2xl font-bold mb-4">Ready to Share Your Knowledge?</h2>
+        <h2 className="text-2xl font-bold mb-4 dark:text-gray-600">
+          Ready to Share Your Knowledge?
+        </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-          Join our community of blockchain educators and start earning crypto while helping others learn.
+          Join our community of blockchain educators and start earning crypto
+          while helping others learn.
         </p>
         <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
           Apply Now <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </div>
-  )
+  );
 }
-
