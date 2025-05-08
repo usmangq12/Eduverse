@@ -23,124 +23,23 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
+import { TeacherFormBuilder } from "./components/TeacherFormBuilder";
 
 export default function StartTeaching() {
   return (
     <div className="container px-4 py-12">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2 dark:text-gray-600">Become a Teacher</h1>
+        <h1 className="text-3xl font-bold mb-2 dark:text-gray-600">
+          Become a Teacher
+        </h1>
         <p className="text-gray-600">
           Share your blockchain knowledge and earn crypto
         </p>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <Card>
-            <CardHeader>
-              <CardTitle>Teacher Application</CardTitle>
-              <CardDescription>
-                Tell us about yourself and your teaching experience
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form className="space-y-6">
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="first-name">First name</Label>
-                    <Input
-                      id="first-name"
-                      placeholder="Enter your first name"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="last-name">Last name</Label>
-                    <Input id="last-name" placeholder="Enter your last name" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="wallet">Solana Wallet Address</Label>
-                  <Input
-                    id="wallet"
-                    placeholder="Enter your Solana wallet address"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="expertise">Area of Expertise</Label>
-                  <RadioGroup
-                    defaultValue="solana"
-                    className="grid gap-4 sm:grid-cols-2"
-                  >
-                    <div className="flex items-center space-x-2 rounded-md border p-3">
-                      <RadioGroupItem value="solana" id="solana" />
-                      <Label htmlFor="solana" className="flex-1 cursor-pointer">
-                        Solana Development
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-md border p-3">
-                      <RadioGroupItem
-                        value="smart-contracts"
-                        id="smart-contracts"
-                      />
-                      <Label
-                        htmlFor="smart-contracts"
-                        className="flex-1 cursor-pointer"
-                      >
-                        Smart Contracts
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-md border p-3">
-                      <RadioGroupItem value="defi" id="defi" />
-                      <Label htmlFor="defi" className="flex-1 cursor-pointer">
-                        DeFi Applications
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-md border p-3">
-                      <RadioGroupItem value="nft" id="nft" />
-                      <Label htmlFor="nft" className="flex-1 cursor-pointer">
-                        NFT Creation
-                      </Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="experience">Teaching Experience</Label>
-                  <Textarea
-                    id="experience"
-                    placeholder="Describe your teaching experience and qualifications"
-                    className="min-h-[120px]"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="course-idea">Course Idea</Label>
-                  <Textarea
-                    id="course-idea"
-                    placeholder="Briefly describe the course you'd like to create"
-                    className="min-h-[120px]"
-                  />
-                </div>
-
-                <div className="flex justify-end">
-                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                    Submit Application
-                  </Button>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
+      <div className="grid gap-8 xl:grid-cols-3">
+        <div className="xl:col-span-2 h-full">
+         <TeacherFormBuilder/>
         </div>
 
         <div className="space-y-6">
@@ -260,7 +159,9 @@ export default function StartTeaching() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">Teacher Success Stories</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">
+          Teacher Success Stories
+        </h2>
 
         <Tabs defaultValue="earnings" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8">
@@ -323,8 +224,12 @@ export default function StartTeaching() {
                     <div className="space-y-4">
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span className="dark:text-gray-600">Beginner Teacher</span>
-                          <span className="dark:text-gray-600">$500 - $1,000</span>
+                          <span className="dark:text-gray-600">
+                            Beginner Teacher
+                          </span>
+                          <span className="dark:text-gray-600">
+                            $500 - $1,000
+                          </span>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full">
                           <div className="h-2 bg-emerald-600 rounded-full w-1/4"></div>
@@ -332,8 +237,12 @@ export default function StartTeaching() {
                       </div>
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span className="dark:text-gray-600">Established Teacher</span>
-                          <span className="dark:text-gray-600">$1,000 - $3,000</span>
+                          <span className="dark:text-gray-600">
+                            Established Teacher
+                          </span>
+                          <span className="dark:text-gray-600">
+                            $1,000 - $3,000
+                          </span>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full">
                           <div className="h-2 bg-emerald-600 rounded-full w-1/2"></div>
@@ -341,8 +250,12 @@ export default function StartTeaching() {
                       </div>
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span className="dark:text-gray-600">Top Teacher</span>
-                          <span className="dark:text-gray-600">$3,000 - $10,000+</span>
+                          <span className="dark:text-gray-600">
+                            Top Teacher
+                          </span>
+                          <span className="dark:text-gray-600">
+                            $3,000 - $10,000+
+                          </span>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full">
                           <div className="h-2 bg-emerald-600 rounded-full w-3/4"></div>

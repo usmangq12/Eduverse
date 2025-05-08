@@ -61,7 +61,7 @@ export default function Home() {
                 <Button
                   asChild
                   variant="outline"
-                  className="border-gray-300 text-gray-700 border  hover:bg-gray-100 dark:hover:text-gray-500"
+                  className="border-gray-300 text-gray-700 border  hover:bg-gray-100 dark:hover:text-gray-500 dark:border dark:border-gray-400"
                 >
                   <Link href="/start-learning" >Browse Courses</Link>
                 </Button>
