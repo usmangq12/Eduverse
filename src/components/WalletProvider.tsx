@@ -25,7 +25,7 @@ interface Props {
 
 export const WalletContextProvider: FC<Props> = ({ children }) => {
   // Choose Solana cluster
-  const endpoint = clusterApiUrl('devnet'); // or 'mainnet-beta', 'testnet'
+  const endpoint = clusterApiUrl('devnet');
 
   // Choose wallet adapters to support
   const wallets = useMemo(
