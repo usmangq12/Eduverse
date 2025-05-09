@@ -41,7 +41,7 @@ export default function CoursePreview() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 mt-12">
+    <div className="min-h-screen bg-gray-50">
       {/* Preview Banner */}
       <div className="bg-gradient-to-r from-emerald-800 to-emerald-600 text-white py-3 px-4 text-center">
         <div className="container mx-auto flex items-center justify-center gap-2">

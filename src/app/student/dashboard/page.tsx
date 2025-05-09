@@ -1,12 +1,29 @@
-import { BookOpen, Clock, Award, CheckCircle, ChevronRight, Wallet, BarChart3, Zap, Star } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
+import {
+  BookOpen,
+  Clock,
+  Award,
+  CheckCircle,
+  ChevronRight,
+  BarChart3,
+  Zap,
+  Star,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import { DashboardNavbar } from "./components/DashboardNavbar";
 
 export default function StudentDashboard() {
   // This would normally come from a database or blockchain query
@@ -17,7 +34,7 @@ export default function StudentDashboard() {
       instructor: "Alex Johnson",
       progress: 35,
       lastAccessed: "2 days ago",
-      image: "/solana-program.png",
+      image: "/solana-network-flow.png",
       nftId: "nft_sol_3a4b5c6d7e8f9g0h",
       nftImage: "/placeholder.svg?key=6cc8u",
       totalLessons: 24,
@@ -29,20 +46,20 @@ export default function StudentDashboard() {
       instructor: "Sarah Chen",
       progress: 12,
       lastAccessed: "1 week ago",
-      image: "/tokenomics.png",
+      image: "/defi-course-access-token.png",
       nftId: "nft_sol_1i2j3k4l5m6n7o8p",
       nftImage: "/defi-course-access-token.png",
       totalLessons: 32,
       completedLessons: 4,
     },
-  ]
+  ];
 
   const achievements = [
     {
       id: "first-smart-contract",
       title: "First Smart Contract",
       description: "Successfully deployed your first smart contract",
-      image: "/placeholder.svg?key=a7wx8",
+      image: "/interconnected-contracts.png",
       dateEarned: "April 28, 2023",
       nftId: "nft_ach_2b3c4d5e6f7g8h9i",
     },
@@ -54,44 +71,33 @@ export default function StudentDashboard() {
       dateEarned: "April 15, 2023",
       nftId: "nft_ach_9i8h7g6f5e4d3c2b",
     },
-  ]
+  ];
 
   const walletInfo = {
     address: "8ZJ5TKhUr3QvKBV7HP1fSZADGzTyqSL4VrXRdTzYFwjN",
     balance: 2.45,
     learningTokens: 120,
     nftCount: 4,
-  }
+  };
 
   return (
-    <div className="container px-4 py-8">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-        <div>
-          <h1 className="text-3xl font-bold">My Learning Dashboard</h1>
-          <p className="text-gray-500">Track your progress and manage your courses</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <Button variant="outline" className="flex items-center gap-2">
-            <Wallet className="h-4 w-4" />
-            <span className="hidden sm:inline">Connected:</span>
-            <span className="font-mono text-xs truncate max-w-[80px] sm:max-w-[120px]">{walletInfo.address}</span>
-          </Button>
-          <Button className="bg-emerald-600 hover:bg-emerald-700">Browse Courses</Button>
-        </div>
-      </div>
-
+    <div className=" px-4 pb-12">
+      <DashboardNavbar walletAddress={walletInfo.address} />
       <div className="grid gap-6 md:grid-cols-4 mb-8">
         <Card>
           <CardHeader className="pb-2">
             <CardDescription>Wallet Balance</CardDescription>
-            <CardTitle className="text-2xl">◎ {walletInfo.balance} SOL</CardTitle>
+            <CardTitle className="text-2xl">
+              ◎ {walletInfo.balance} SOL
+            </CardTitle>
           </CardHeader>
         </Card>
         <Card>
           <CardHeader className="pb-2">
             <CardDescription>Learning Tokens</CardDescription>
             <CardTitle className="text-2xl flex items-center">
-              <Zap className="h-5 w-5 text-amber-500 mr-1" /> {walletInfo.learningTokens} LRN
+              <Zap className="h-5 w-5 text-amber-500 mr-1" />{" "}
+              {walletInfo.learningTokens} LRN
             </CardTitle>
           </CardHeader>
         </Card>
@@ -119,24 +125,28 @@ export default function StudentDashboard() {
         <TabsContent value="courses" className="space-y-6">
           <div className="grid gap-6 md:grid-cols-2">
             {enrolledCourses.map((course) => (
-              <Card key={course.id} className="overflow-hidden">
+              <Card key={course.id} className="overflow-hidden py-0">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-1/3 relative">
                     <div className="aspect-square md:h-full relative">
                       <Image
                         src={course.image || "/placeholder.svg"}
                         alt={course.title}
-                        fill
-                        className="object-cover"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        className="w-full h-full"
                       />
                     </div>
                     <div className="absolute top-2 left-2">
                       <Badge className="bg-emerald-600">NFT Access</Badge>
                     </div>
                   </div>
-                  <div className="md:w-2/3 p-4 flex flex-col">
+                  <div className="md:w-2/3 p-4 flex flex-col py-6">
                     <h3 className="font-medium line-clamp-2">{course.title}</h3>
-                    <p className="text-sm text-gray-500 mb-2">Instructor: {course.instructor}</p>
+                    <p className="text-sm text-gray-500 mb-2">
+                      Instructor: {course.instructor}
+                    </p>
 
                     <div className="mt-auto space-y-3">
                       <div className="space-y-1">
@@ -150,7 +160,8 @@ export default function StudentDashboard() {
                       <div className="flex justify-between text-xs text-gray-500">
                         <span className="flex items-center">
                           <BookOpen className="h-3 w-3 mr-1" />
-                          {course.completedLessons}/{course.totalLessons} lessons
+                          {course.completedLessons}/{course.totalLessons}{" "}
+                          lessons
                         </span>
                         <span className="flex items-center">
                           <Clock className="h-3 w-3 mr-1" />
@@ -160,10 +171,18 @@ export default function StudentDashboard() {
 
                       <div className="flex justify-between">
                         <Button variant="outline" size="sm" asChild>
-                          <Link href={`/design3/courses/${course.id}/nft`}>View NFT</Link>
+                          <Link href={`/courses/${course.id}/nft`}>
+                            View NFT
+                          </Link>
                         </Button>
-                        <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700" asChild>
-                          <Link href={`/design3/courses/${course.id}`}>Continue Learning</Link>
+                        <Button
+                          size="sm"
+                          className="bg-emerald-600 hover:bg-emerald-700"
+                          asChild
+                        >
+                          <Link href={`/courses/${course.id}`}>
+                            Continue Learning
+                          </Link>
                         </Button>
                       </div>
                     </div>
@@ -183,8 +202,10 @@ export default function StudentDashboard() {
                     <Image
                       src={achievement.image || "/placeholder.svg"}
                       alt={achievement.title}
-                      fill
-                      className="object-contain"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="w-full h-full"
                     />
                   </div>
                   <CardTitle className="text-lg">{achievement.title}</CardTitle>
@@ -192,7 +213,9 @@ export default function StudentDashboard() {
                 </CardHeader>
                 <CardContent className="text-center text-sm">
                   <p>Earned on {achievement.dateEarned}</p>
-                  <p className="text-xs text-gray-500 mt-1">NFT ID: {achievement.nftId.slice(-8)}</p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    NFT ID: {achievement.nftId.slice(-8)}
+                  </p>
                 </CardContent>
                 <CardFooter className="justify-center pt-0">
                   <Button variant="outline" size="sm">
@@ -208,11 +231,13 @@ export default function StudentDashboard() {
                   <Award className="h-12 w-12 text-gray-300" />
                 </div>
                 <CardTitle className="text-lg">More to Earn</CardTitle>
-                <CardDescription>Complete courses to earn more achievements</CardDescription>
+                <CardDescription>
+                  Complete courses to earn more achievements
+                </CardDescription>
               </CardHeader>
               <CardFooter className="justify-center pt-0">
                 <Button variant="outline" size="sm" asChild>
-                  <Link href="/design3/achievements">View All Achievements</Link>
+                  <Link href="/achievements">View All Achievements</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -225,9 +250,14 @@ export default function StudentDashboard() {
               <Award className="h-12 w-12 text-gray-300" />
             </div>
             <h3 className="text-xl font-medium mb-2">No Certificates Yet</h3>
-            <p className="text-gray-500 mb-6">Complete a course to earn your first certificate NFT</p>
-            <Button className="bg-emerald-600 hover:bg-emerald-700 mx-auto" asChild>
-              <Link href="/design3/courses">Continue Learning</Link>
+            <p className="text-gray-500 mb-6">
+              Complete a course to earn your first certificate NFT
+            </p>
+            <Button
+              className="bg-emerald-600 hover:bg-emerald-700 mx-auto"
+              asChild
+            >
+              <Link href="/courses">Continue Learning</Link>
             </Button>
           </Card>
         </TabsContent>
@@ -235,9 +265,9 @@ export default function StudentDashboard() {
 
       <div className="space-y-6">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-bold">Learning Activity</h2>
+          <h2 className="text-xl font-bold dark:text-gray-600">Learning Activity</h2>
           <Button variant="link" size="sm" className="text-emerald-600" asChild>
-            <Link href="/design3/student/activity">
+            <Link href="/student/activity">
               View All <ChevronRight className="h-4 w-4 ml-1" />
             </Link>
           </Button>
@@ -246,7 +276,9 @@ export default function StudentDashboard() {
         <Card>
           <CardHeader>
             <CardTitle>On-Chain Learning Progress</CardTitle>
-            <CardDescription>Your learning activity is recorded on the blockchain</CardDescription>
+            <CardDescription>
+              Your learning activity is recorded on the blockchain
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -256,13 +288,19 @@ export default function StudentDashboard() {
                 </div>
                 <div>
                   <div className="flex items-center">
-                    <h4 className="font-medium">Completed Lesson: Introduction to Solana Architecture</h4>
+                    <h4 className="font-medium">
+                      Completed Lesson: Introduction to Solana Architecture
+                    </h4>
                     <Badge variant="outline" className="ml-2">
                       +10 LRN
                     </Badge>
                   </div>
-                  <p className="text-sm text-gray-500">May 7, 2023 at 2:45 PM</p>
-                  <p className="text-xs text-gray-400 font-mono mt-1">Transaction: 2NPHVz3R...7mBz3Uv</p>
+                  <p className="text-sm text-gray-500">
+                    May 7, 2023 at 2:45 PM
+                  </p>
+                  <p className="text-xs text-gray-400 font-mono mt-1">
+                    Transaction: 2NPHVz3R...7mBz3Uv
+                  </p>
                 </div>
               </div>
 
@@ -272,13 +310,19 @@ export default function StudentDashboard() {
                 </div>
                 <div>
                   <div className="flex items-center">
-                    <h4 className="font-medium">Earned Achievement: First Smart Contract</h4>
+                    <h4 className="font-medium">
+                      Earned Achievement: First Smart Contract
+                    </h4>
                     <Badge variant="outline" className="ml-2">
                       NFT Minted
                     </Badge>
                   </div>
-                  <p className="text-sm text-gray-500">April 28, 2023 at 11:20 AM</p>
-                  <p className="text-xs text-gray-400 font-mono mt-1">Transaction: 7LPQxR2S...9aTb4Wc</p>
+                  <p className="text-sm text-gray-500">
+                    April 28, 2023 at 11:20 AM
+                  </p>
+                  <p className="text-xs text-gray-400 font-mono mt-1">
+                    Transaction: 7LPQxR2S...9aTb4Wc
+                  </p>
                 </div>
               </div>
 
@@ -288,13 +332,19 @@ export default function StudentDashboard() {
                 </div>
                 <div>
                   <div className="flex items-center">
-                    <h4 className="font-medium">Quiz Completed: Blockchain Fundamentals</h4>
+                    <h4 className="font-medium">
+                      Quiz Completed: Blockchain Fundamentals
+                    </h4>
                     <Badge variant="outline" className="ml-2">
                       Score: 85%
                     </Badge>
                   </div>
-                  <p className="text-sm text-gray-500">April 15, 2023 at 3:30 PM</p>
-                  <p className="text-xs text-gray-400 font-mono mt-1">Transaction: 5RtYuV6W...2xZa1Bc</p>
+                  <p className="text-sm text-gray-500">
+                    April 15, 2023 at 3:30 PM
+                  </p>
+                  <p className="text-xs text-gray-400 font-mono mt-1">
+                    Transaction: 5RtYuV6W...2xZa1Bc
+                  </p>
                 </div>
               </div>
             </div>
@@ -302,5 +352,5 @@ export default function StudentDashboard() {
         </Card>
       </div>
     </div>
-  )
+  );
 }

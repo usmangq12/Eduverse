@@ -16,7 +16,8 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     Icon: LucideIcon;
   }[] = [
     { label: "Home", path: "/", Icon: Home },
-    { label: "Dashboard", path: "/dashboard", Icon: LayoutDashboard },
+    { label: "Teacher Dashboard", path: "/teacher/dashboard", Icon: LayoutDashboard },
+    { label: "Student Dashboard", path: "/student/dashboard", Icon: LayoutDashboard },
     { label: "My Courses", path: "/courses", Icon: BookOpen },
   ];
 
@@ -29,7 +30,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     >
       <div className="flex flex-col min-h-screen bg-white">
         <AppHeader links={links} />
-        <main className="flex-grow p-4 pb-0">
+        <main className="flex-grow p-4 pb-0 pt-16">
           <ClusterChecker>
             <AccountChecker />
           </ClusterChecker>

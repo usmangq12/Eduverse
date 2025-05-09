@@ -36,8 +36,8 @@ export function AppHeader({
                     href={path}
                   >
                    <div className="flex gap-2 justify-center items-center">
-                     <Icon className="w-5 h-5"/>
-                   <p>{label}</p>
+                     <Icon className="w-4 h-4"/>
+                   <p className="text-sm">{label}</p>
                    </div>
                   </Link>
                 </li>

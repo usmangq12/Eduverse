@@ -39,7 +39,7 @@ import {
       tokenPrice: 0.5,
       discountPrice: 59.99,
       discountEnds: "June 15, 2023",
-      image: "/solana-program.png",
+      image: "/solana-network-flow.png",
       description:
         "Learn the fundamentals of Solana blockchain development from the ground up. This comprehensive course will take you from basic concepts to building your first decentralized application on Solana.",
       includes: [
@@ -67,10 +67,10 @@ import {
     }
   
     return (
-      <div className="container px-4 py-12">
+      <div className=" px-4 py-12">
         <div className="flex items-center gap-2 mb-8">
           <Button asChild variant="outline" size="icon">
-            <Link href="/design3/courses">
+            <Link href="/courses">
               <ArrowLeft className="h-4 w-4" />
             </Link>
           </Button>
@@ -195,9 +195,11 @@ import {
                         <span>30-day money-back guarantee</span>
                       </div>
   
-                      <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white">
+                    <Link href={"/courses/3/payment-confirmation"}>
+                    <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white">
                         <CreditCard className="mr-2 h-4 w-4" /> Enroll Now
                       </Button>
+                    </Link>
                     </TabsContent>
   
                     <TabsContent value="crypto" className="space-y-4">

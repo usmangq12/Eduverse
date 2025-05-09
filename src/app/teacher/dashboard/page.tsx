@@ -25,12 +25,12 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export default function TeacherDashboard() {
+export default function TeacherDashboard() {  
   return (
-    <div className="px-4 py-12">
+    <div className="px-4 pb-12">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
         <div>
-          <h1 className="text-3xl font-bold mb-2">Teacher Dashboard</h1>
+          <h1 className="text-3xl font-bold mb-2 dark:text-gray-600">Teacher Dashboard</h1>
           <p className="text-gray-600">
             Manage your courses and track your performance
           </p>
@@ -146,14 +146,14 @@ export default function TeacherDashboard() {
                 progress: 65,
               },
             ].map((course, i) => (
-              <Card key={i} className="overflow-hidden">
+              <Card key={i} className="overflow-hidden py-0">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-64 bg-gray-100 flex items-center justify-center p-4">
                     <div className="h-12 w-12 rounded-md bg-emerald-100 flex items-center justify-center">
                       <BookOpen className="h-6 w-6 text-emerald-600" />
                     </div>
                   </div>
-                  <div className="flex-1 p-6">
+                  <div className="flex-1 p-6 py-12">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                       <div>
                         <h3 className="text-xl font-bold">{course.title}</h3>
@@ -245,7 +245,7 @@ export default function TeacherDashboard() {
         </TabsContent>
 
         <TabsContent value="students">
-          <Card>
+          <Card >
             <CardHeader>
               <CardTitle>Student Activity</CardTitle>
               <CardDescription>

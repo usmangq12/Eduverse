@@ -12,8 +12,8 @@ export default function CourseNFTView() {
     id: "nft_sol_3a4b5c6d7e8f9g0h",
     courseId: "solana-fundamentals",
     courseTitle: "Solana Fundamentals: Build Your First dApp",
-    courseImage: "/solana-program.png",
-    nftImage: "/placeholder.svg?key=kddww",
+    courseImage: "/solana-network-flow.png",
+    nftImage: "/solana-network-flow.png",
     mintDate: "May 8, 2023",
     owner: "8ZJ5TKhUr3QvKBV7HP1fSZADGzTyqSL4VrXRdTzYFwjN",
     tokenAddress: "7LPQxR2S9aTb4Wc5RtYuV6W2xZa1Bc",
@@ -43,7 +43,7 @@ export default function CourseNFTView() {
     <div className="container px-4 py-12">
       <div className="flex items-center gap-2 mb-8">
         <Button asChild variant="outline" size="icon">
-          <Link href="/design3/student/dashboard">
+          <Link href="/student/dashboard">
             <ArrowLeft className="h-4 w-4" />
           </Link>
         </Button>
@@ -64,7 +64,7 @@ export default function CourseNFTView() {
 
             <div className="flex flex-wrap gap-2 mb-6">
               <Button className="flex-1 bg-emerald-600 hover:bg-emerald-700" asChild>
-                <Link href={`/design3/courses/${courseNft.courseId}`}>Access Course</Link>
+                <Link href={`/courses/${courseNft.courseId}`}>Access Course</Link>
               </Button>
               <Button variant="outline" size="icon">
                 <Share2 className="h-4 w-4" />
@@ -126,7 +126,7 @@ export default function CourseNFTView() {
             <CardHeader>
               <CardTitle>{courseNft.metadata.name}</CardTitle>
               <CardDescription>
-                <Link href={`/design3/courses/${courseNft.courseId}`} className="text-emerald-600 hover:underline">
+                <Link href={`/courses/${courseNft.courseId}`} className="text-emerald-600 hover:underline">
                   {courseNft.courseTitle}
                 </Link>
               </CardDescription>

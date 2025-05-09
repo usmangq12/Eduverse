@@ -13,7 +13,7 @@ export default function PaymentConfirmation() {
     id: "tx_sol_5f7e9a2d8b3c1e6f",
     courseId: "solana-fundamentals",
     courseTitle: "Solana Fundamentals: Build Your First dApp",
-    courseImage: "/solana-program.png",
+    courseImage: "/solana-network-flow.png",
     amount: 0.375,
     currency: "SOL",
     usdEquivalent: 59.99,
@@ -23,13 +23,13 @@ export default function PaymentConfirmation() {
       "https://explorer.solana.com/tx/2NPHVz3RLUZmEDQJjdZKpKjbGK5JTQPxRYv1jqGPwQ6UQA5ECzR9qyqaHLT7mBz3Uv",
     nftMinted: true,
     nftId: "nft_sol_3a4b5c6d7e8f9g0h",
-    nftImage: "/placeholder.svg?key=48x8t",
+    nftImage: "/solana-network-flow.png",
   }
 
   const formattedDate = new Date(transaction.timestamp).toLocaleString()
 
   return (
-    <div className="container max-w-4xl px-4 py-12">
+    <div className=" px-4 py-12">
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 mb-4">
           <CheckCircle className="h-8 w-8 text-emerald-600" />
@@ -143,7 +143,7 @@ export default function PaymentConfirmation() {
         </CardContent>
         <CardFooter className="flex justify-center border-t pt-6">
           <Button className="bg-emerald-600 hover:bg-emerald-700" asChild>
-            <Link href="/design3/student/dashboard">Go to My Learning Dashboard</Link>
+            <Link href="/student/dashboard">Go to My Learning Dashboard</Link>
           </Button>
         </CardFooter>
       </Card>
