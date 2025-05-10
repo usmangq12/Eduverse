@@ -48,10 +48,10 @@ export function AppHeader({
                     className={`hover:text-neutral-500 dark:hover:text-emerald-600 ${pathname === path ? "text-neutral-500 dark:text-emerald-600" : "dark:text-gray-600"}`}
                     href={path}
                   >
-                    <div className="flex gap-2 justify-center items-center">
-                      <Icon className="w-5 h-5" />
-                      <p>{label}</p>
-                    </div>
+                   <div className="flex gap-2 justify-center items-center">
+                     <Icon className="w-4 h-4"/>
+                   <p className="text-sm">{label}</p>
+                   </div>
                   </Link>
                 </li>
               ))}

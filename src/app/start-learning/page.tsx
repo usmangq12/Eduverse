@@ -33,12 +33,16 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
+import { courses } from "@/constant";
+import Link from "next/link";
 
 export default function StartLearning() {
   return (
-    <div className=" px-4 pt-12">
+    <div className=" px-4">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Explore Courses</h1>
+        <h1 className="text-3xl font-bold mb-2 dark:text-gray-600">
+          Explore Courses
+        </h1>
         <p className="text-gray-600">
           Find the perfect blockchain course to advance your skills
         </p>
@@ -177,10 +181,10 @@ export default function StartLearning() {
             <div className="flex items-center gap-2">
               <span className="text-gray-600">Sort by:</span>
               <Select defaultValue="popular">
-                <SelectTrigger className="w-[180px] hover:cursor-pointer">
+                <SelectTrigger className="w-[180px] hover:cursor-pointer dark:text-gray-600 border-gray-400">
                   <SelectValue placeholder="Sort by" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent >
                   <SelectItem value="popular">Most Popular</SelectItem>
                   <SelectItem value="newest">Newest</SelectItem>
                   <SelectItem value="highest">Highest Rated</SelectItem>
@@ -210,103 +214,9 @@ export default function StartLearning() {
           </Tabs>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Solana Fundamentals",
-                instructor: "Alex Johnson",
-                students: 1248,
-                duration: "8 hours",
-                rating: 4.8,
-                price: "$59",
-                level: "Beginner",
-                image: "/solana-network-flow.png",
-              },
-              {
-                title: "Smart Contract Development",
-                instructor: "Maria Garcia",
-                students: 864,
-                duration: "12 hours",
-                rating: 4.6,
-                price: "$79",
-                level: "Intermediate",
-                image: "/interconnected-contracts.png",
-              },
-              {
-                title: "DeFi Applications",
-                instructor: "James Wilson",
-                students: 632,
-                duration: "10 hours",
-                rating: 4.7,
-                price: "$69",
-                level: "Advanced",
-                image: "/interconnected-defi-network.png",
-              },
-              {
-                title: "NFT Marketplace Creation",
-                instructor: "Sarah Ahmed",
-                students: 1032,
-                duration: "14 hours",
-                rating: 4.9,
-                price: "$89",
-                level: "Intermediate",
-                image: "/interconnected-defi-network.png",
-                badge: "Bestseller",
-              },
-              {
-                title: "Solana Program Library",
-                instructor: "Michael Chen",
-                students: 428,
-                duration: "6 hours",
-                rating: 4.5,
-                price: "$49",
-                level: "Advanced",
-                image: "/solana-network-flow.png",
-              },
-              {
-                title: "Web3 Security Fundamentals",
-                instructor: "David Kim",
-                students: 756,
-                duration: "9 hours",
-                rating: 4.7,
-                price: "$69",
-                level: "Intermediate",
-                image: "/interconnected-contracts.png",
-                badge: "New",
-              },
-              {
-                title: "Blockchain Interoperability",
-                instructor: "Lisa Wang",
-                students: 312,
-                duration: "7 hours",
-                rating: 4.4,
-                price: "$59",
-                level: "Advanced",
-                image: "/interconnected-contracts.png",
-              },
-              {
-                title: "Tokenomics Design",
-                instructor: "Robert Taylor",
-                students: 524,
-                duration: "5 hours",
-                rating: 4.6,
-                price: "$49",
-                level: "Intermediate",
-                image: "/interconnected-defi-network.png",
-              },
-              {
-                title: "Intro to Blockchain",
-                instructor: "Emily Brown",
-                students: 1876,
-                duration: "4 hours",
-                rating: 4.9,
-                price: "$29",
-                level: "Beginner",
-                image: "/solana-network-flow.png",
-                badge: "Popular",
-              },
-            ].map((course, index) => (
+            {courses.map((course) => (
               <Card
-                key={index}
+                key={course.id}
                 className="overflow-hidden border-gray-200 shadow-sm hover:shadow-md transition-shadow pt-0"
               >
                 <div className=" w-full bg-gray-100 relative">
@@ -348,14 +258,19 @@ export default function StartLearning() {
                       <span>{course.rating}</span>
                     </div>
                   </div>
-                  <Badge variant="outline" className="bg-gray-50">
+                  <Badge
+                    variant="outline"
+                    className="bg-gray-50 dark:text-gray-600"
+                  >
                     {course.level}
                   </Badge>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white hover:cursor-pointer">
+                  <Link href= {'/courses/3/enroll'} className="w-full">
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white hover:cursor-pointer" >
                     Enroll Now
                   </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             ))}
@@ -387,7 +302,9 @@ export default function StartLearning() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Learning Paths</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">
+          Learning Paths
+        </h2>
         <p className="text-gray-600 mb-8 max-w-3xl">
           Not sure where to start? Our curated learning paths guide you from
           beginner to expert in specific blockchain domains.
@@ -468,7 +385,9 @@ export default function StartLearning() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Recommended For You</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">
+          Recommended For You
+        </h2>
         <p className="text-gray-600 mb-8 max-w-3xl">
           Based on your interests and browsing history, we think you might like
           these courses.
@@ -542,7 +461,9 @@ export default function StartLearning() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Getting Started</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-600">
+          Getting Started
+        </h2>
         <div className="grid gap-8 md:grid-cols-2">
           <Card>
             <CardHeader>
@@ -671,7 +592,7 @@ export default function StartLearning() {
       <div className="mt-16 bg-emerald-50  rounded-lg">
         <div className="flex gap-8 items-stretch flex-col md:flex-row h-full">
           <div className="flex-1 p-8  h-full">
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4 dark:text-gray-600">
               Ready to Start Learning?
             </h2>
             <p className="text-gray-600 mb-6">

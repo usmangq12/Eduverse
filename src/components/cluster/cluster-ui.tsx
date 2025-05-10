@@ -32,18 +32,23 @@ export function ClusterChecker({ children }: { children: ReactNode }) {
   const { client } = useWalletUi()
   const { cluster } = useWalletUiCluster()
 
-  if (!cluster || !cluster.urlOrMoniker) {
-    return null 
-  }
+  const canFetch = !!cluster && !!cluster.urlOrMoniker
 
   const query = useQuery({
-    queryKey: ['version', { cluster, endpoint: cluster.urlOrMoniker }],
+    queryKey: ['version', { cluster, endpoint: cluster?.urlOrMoniker }],
     queryFn: () => client.rpc.getVersion(),
+    enabled: canFetch,
     retry: 1,
   })
+
+  if (!canFetch) {
+    return null
+  }
+
   if (query.isLoading) {
     return null
   }
+
   if (query.isError || !query.data) {
     return (
       <AppAlert
@@ -57,5 +62,6 @@ export function ClusterChecker({ children }: { children: ReactNode }) {
       </AppAlert>
     )
   }
+
   return children
 }

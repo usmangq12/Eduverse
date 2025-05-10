@@ -43,7 +43,7 @@ export default function Home() {
               <div className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-sm text-emerald-800 mb-6">
                 Web3 Learning Marketplace
               </div>
-              <h1 className="text-4xl font-bold tracking-tight lg:text-5xl mb-6">
+              <h1 className="text-4xl font-bold tracking-tight lg:text-5xl mb-6 dark:text-gray-600">
                 Learn & Teach{" "}
                 <span className="text-emerald-600">Blockchain</span> Development
               </h1>
@@ -61,9 +61,9 @@ export default function Home() {
                 <Button
                   asChild
                   variant="outline"
-                  className="border-gray-300 text-gray-700 hover:bg-gray-100"
+                  className="border-gray-300 text-gray-700 border  hover:bg-gray-100 dark:hover:text-gray-500 dark:border dark:border-gray-400"
                 >
-                  <Link href="/start-learning">Browse Courses</Link>
+                  <Link href="/start-learning" >Browse Courses</Link>
                 </Button>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function Home() {
                         <Upload className="h-5 w-5 text-emerald-600" />
                       </div>
                       <div>
-                        <h3 className="font-medium">Create Courses</h3>
+                        <h3 className="font-medium dark:text-gray-600">Create Courses</h3>
                         <p className="text-sm text-gray-600">
                           Upload your blockchain expertise
                         </p>
@@ -96,7 +96,7 @@ export default function Home() {
                         <Users className="h-5 w-5 text-emerald-600" />
                       </div>
                       <div>
-                        <h3 className="font-medium">Reach Students</h3>
+                        <h3 className="font-medium dark:text-gray-600">Reach Students</h3>
                         <p className="text-sm text-gray-600">
                           Connect with eager learners
                         </p>
@@ -107,7 +107,7 @@ export default function Home() {
                         <Wallet className="h-5 w-5 text-emerald-600" />
                       </div>
                       <div>
-                        <h3 className="font-medium">Earn Crypto</h3>
+                        <h3 className="font-medium dark:text-gray-600">Earn Crypto</h3>
                         <p className="text-sm text-gray-600">
                           Get paid in SOL for your knowledge
                         </p>
@@ -120,7 +120,7 @@ export default function Home() {
                         <Code className="h-5 w-5 text-emerald-600" />
                       </div>
                       <div>
-                        <h3 className="font-medium">Learn from Experts</h3>
+                        <h3 className="font-medium dark:text-gray-600">Learn from Experts</h3>
                         <p className="text-sm text-gray-600">
                           Access quality blockchain content
                         </p>
@@ -131,7 +131,7 @@ export default function Home() {
                         <Shield className="h-5 w-5 text-emerald-600" />
                       </div>
                       <div>
-                        <h3 className="font-medium">Earn Certificates</h3>
+                        <h3 className="font-medium dark:text-gray-600">Earn Certificates</h3>
                         <p className="text-sm text-gray-600">
                           Get verifiable on-chain credentials
                         </p>
@@ -142,7 +142,7 @@ export default function Home() {
                         <Zap className="h-5 w-5 text-emerald-600" />
                       </div>
                       <div>
-                        <h3 className="font-medium">Build Projects</h3>
+                        <h3 className="font-medium dark:text-gray-600">Build Projects</h3>
                         <p className="text-sm text-gray-600">
                           Apply skills with hands-on experience
                         </p>
@@ -192,7 +192,7 @@ export default function Home() {
       <section className="py-12 md:py-24 bg-white">
         <div className=" px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How It Works</h2>
+            <h2 className="text-3xl font-bold mb-4 dark:text-gray-600">How It Works</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our platform connects blockchain experts with students in a
               decentralized ecosystem
@@ -286,7 +286,7 @@ export default function Home() {
         <div className=" px-4">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-bold mb-2">Popular Courses</h2>
+              <h2 className="text-3xl font-bold mb-2 dark:text-gray-600">Popular Courses</h2>
               <p className="text-gray-600">Most in-demand blockchain courses</p>
             </div>
             <Button
@@ -400,7 +400,7 @@ export default function Home() {
       <section className="py-12 md:py-24">
         <div className=" px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Popular Categories</h2>
+            <h2 className="text-3xl font-bold mb-4 dark:text-gray-600">Popular Categories</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Explore our most popular blockchain learning categories
             </p>
@@ -447,7 +447,7 @@ export default function Home() {
       <section className="py-12 md:py-24 bg-emerald-50">
         <div className=" px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What Our Students Say</h2>
+            <h2 className="text-3xl font-bold mb-4 dark:text-gray-600">What Our Students Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Hear from our community of blockchain learners and teachers
             </p>
@@ -460,21 +460,21 @@ export default function Home() {
                 role: "Software Developer",
                 content:
                   "The Solana Fundamentals course was exactly what I needed to transition into blockchain development. The instructor was knowledgeable and the hands-on projects were invaluable.",
-                avatar: "/diverse-group-city.png",
+                avatar: "",
               },
               {
                 name: "Sarah Chen",
                 role: "Blockchain Entrepreneur",
                 content:
                   "As someone building a DeFi startup, the Smart Contract Development course gave me the technical foundation I needed. The NFT certificate was a nice bonus that I proudly display on my profile.",
-                avatar: "/contemplative-artist.png",
+                avatar: "",
               },
               {
                 name: "Michael Rodriguez",
                 role: "Web3 Instructor",
                 content:
                   "Teaching on this platform has been rewarding both financially and professionally. The tools for course creation are intuitive, and the payment system is seamless with instant crypto transfers.",
-                avatar: "/contemplative-man.png",
+                avatar: "",
               },
             ].map((testimonial, i) => (
               <Card
@@ -527,7 +527,7 @@ export default function Home() {
               <div className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-sm text-emerald-800 mb-6">
                 Join Our Community
               </div>
-              <h2 className="text-3xl font-bold mb-6">
+              <h2 className="text-3xl font-bold mb-6 dark:text-gray-600">
                 Connect with Blockchain Enthusiasts
               </h2>
               <p className="text-gray-600 mb-6">
@@ -541,7 +541,7 @@ export default function Home() {
                     <CheckCircle className="h-4 w-4 text-emerald-600" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Discussion Forums</h3>
+                    <h3 className="font-medium dark:text-gray-600">Discussion Forums</h3>
                     <p className="text-sm text-gray-600">
                       Engage in technical discussions and get help from
                       experienced developers
@@ -553,7 +553,7 @@ export default function Home() {
                     <CheckCircle className="h-4 w-4 text-emerald-600" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Live Events</h3>
+                    <h3 className="font-medium dark:text-gray-600">Live Events</h3>
                     <p className="text-sm text-gray-600">
                       Attend virtual workshops, hackathons, and networking
                       events
@@ -565,7 +565,7 @@ export default function Home() {
                     <CheckCircle className="h-4 w-4 text-emerald-600" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Mentorship Opportunities</h3>
+                    <h3 className="font-medium dark:text-gray-600">Mentorship Opportunities</h3>
                     <p className="text-sm text-gray-600">
                       Connect with mentors or become one to help others grow in
                       the blockchain space
@@ -607,7 +607,7 @@ export default function Home() {
       <section className="py-12 md:py-24 bg-gray-50">
         <div className=" px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4 dark:text-gray-600">
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -622,7 +622,7 @@ export default function Home() {
                 value="item-1"
                 className="bg-white border rounded-lg  "
               >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer dark:text-gray-600">
                   How do I get started as a student?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
@@ -637,7 +637,7 @@ export default function Home() {
                 value="item-2"
                 className="bg-white border rounded-lg"
               >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer dark:text-gray-600">
                   How do I become a teacher on the platform?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
@@ -652,7 +652,7 @@ export default function Home() {
                 value="item-3"
                 className="bg-white border rounded-lg"
               >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer dark:text-gray-600">
                   What are NFT certificates and how do they work?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
@@ -669,7 +669,7 @@ export default function Home() {
                 value="item-4"
                 className="bg-white border rounded-lg"
               >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer dark:text-gray-600">
                   How are teachers paid on the platform?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
@@ -685,7 +685,7 @@ export default function Home() {
                 value="item-5"
                 className="bg-white border rounded-lg "
               >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer ">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:cursor-pointer dark:text-gray-600">
                   Do I need prior blockchain knowledge to take courses?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
