@@ -1,7 +1,18 @@
+# Anchor program build artifacts
 .anchor
-.DS_Store
 target
-**/*.rs.bk
-node_modules
 test-ledger
+
+# Rust backup files
+**/*.rs.bk
+
+# macOS system files
+.DS_Store
+
+# Node.js dependencies
+node_modules
+package-lock.json
 .yarn
+
+# Optional: VSCode settings (if you don't want to track them)
+.vscode
