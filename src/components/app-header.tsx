@@ -11,6 +11,7 @@ import {
   WalletButton,
 } from "@/components/solana/solana-provider";
 import { useWallet } from "@solana/wallet-adapter-react";
+import { WalletName } from "@solana/wallet-adapter-base";
 
 export function AppHeader({
   links = [],
@@ -23,11 +24,21 @@ export function AppHeader({
 }) {
   const pathname = usePathname();
   const [showMenu, setShowMenu] = useState(false);
-  const { publicKey, disconnect, wallets } = useWallet();
+  const { publicKey, disconnect, wallets, connect, select } = useWallet();
 
   const wallet = useWallet?.();
 
   if (!wallet || !wallets) return null;
+
+  const refreshWallet = async () => {
+    try {
+      await disconnect();
+      await select("Phantom" as WalletName);
+      await connect();
+    } catch (err) {
+      console.error("Failed to refresh wallet:", err);
+    }
+  };
 
 
   const handleDisconnect = async () => {
@@ -79,6 +90,7 @@ export function AppHeader({
           
           {wallets?.length ? <WalletButton size="sm" /> : null}
           {publicKey && (
+            <>
             <Button
               variant="outline"
               className="text-xs px-2 py-1"
@@ -86,6 +98,10 @@ export function AppHeader({
             >
               Disconnect
             </Button>
+            <button onClick={refreshWallet}>
+            Refresh Wallet
+          </button>
+          </>
           )}
           <ClusterButton size="sm" />
           <ThemeSelect />
