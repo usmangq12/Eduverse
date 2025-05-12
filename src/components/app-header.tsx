@@ -11,7 +11,6 @@ import {
   WalletButton,
 } from "@/components/solana/solana-provider";
 import { useWallet } from "@solana/wallet-adapter-react";
-import { WalletName } from "@solana/wallet-adapter-base";
 
 export function AppHeader({
   links = [],
@@ -24,7 +23,7 @@ export function AppHeader({
 }) {
   const pathname = usePathname();
   const [showMenu, setShowMenu] = useState(false);
-  const { publicKey, disconnect, wallets, connect, select } = useWallet();
+  const { publicKey, disconnect, wallets } = useWallet();
 
   const wallet = useWallet?.();
 
