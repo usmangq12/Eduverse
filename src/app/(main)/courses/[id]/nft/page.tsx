@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function CourseNFTView() {
-  // This would normally come from a database or blockchain query based on the course ID
+
   const courseNft = {
     id: "nft_sol_3a4b5c6d7e8f9g0h",
     courseId: "solana-fundamentals",
@@ -40,7 +40,7 @@ export default function CourseNFTView() {
   }
 
   return (
-    <div className="container px-4 py-12">
+    <div className=" px-4 py-12">
       <div className="flex items-center gap-2 mb-8">
         <Button asChild variant="outline" size="icon">
           <Link href="/student/dashboard">
