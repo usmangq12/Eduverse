@@ -9,9 +9,10 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useRouter } from "next/navigation"
 import { Routes } from "@/lib/routes"
 import { UserIcon, MailIcon } from "lucide-react"
+import { addUser } from "@/app/api/auth/route"
 
 const formSchema = z.object({
-  name: z.string().min(2, {
+  full_name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
 
@@ -26,14 +27,19 @@ export const FormBuilder = ({
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      full_name: "",
       email: "",
     },
   })
   const router = useRouter()
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values, userType)
-    router.push(Routes.SubmitSuccess)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      await addUser({ ...values, userType })
+      router.push(Routes.SubmitSuccess)
+    } catch (err) {
+      console.error('Error adding user:', err)
+      form.setError('email', { message: 'Failed to create user' }) 
+    }
   }
 
   return (
@@ -49,7 +55,7 @@ export const FormBuilder = ({
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
-              name="name"
+              name="full_name"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Name</FormLabel>
