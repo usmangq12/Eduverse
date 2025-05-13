@@ -637,7 +637,7 @@ export default function UploadNewCourse() {
 
           <div className="mt-8 flex justify-between">
             <Button variant="outline" asChild>
-              <Link href="/design3/teacher/dashboard">
+              <Link href="/teacher/dashboard">
                 <ArrowLeft className="mr-2 h-4 w-4" /> Back to Dashboard
               </Link>
             </Button>
