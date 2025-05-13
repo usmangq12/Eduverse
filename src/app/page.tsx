@@ -31,10 +31,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import { Routes } from "@/lib/routes";
+import { AppLayout } from "@/components/app-layout";
 
 export default function Home() {
   return (
-    <div>
+   <AppLayout>
+     <div>
       {/* Hero Section */}
       <section className="bg-white py-12 md:py-24">
         <div className=" px-4">
@@ -51,21 +54,7 @@ export default function Home() {
                 A decentralized platform connecting blockchain experts with
                 students on Solana.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  asChild
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white"
-                >
-                  <Link href="/start-teaching">Become a Teacher</Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="border-gray-300 text-gray-700 border  hover:bg-gray-100 dark:hover:text-gray-500 dark:border dark:border-gray-400"
-                >
-                  <Link href="/start-learning" >Browse Courses</Link>
-                </Button>
-              </div>
+            
             </div>
             <div className="relative">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-emerald-200 to-emerald-100 opacity-50 blur-xl"></div>
@@ -235,7 +224,7 @@ export default function Home() {
                   asChild
                   className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
                 >
-                  <Link href="/start-teaching">Start Teaching</Link>
+                  <Link href={`${Routes.SignUp}?type=teacher`}>Start Teaching</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -273,7 +262,7 @@ export default function Home() {
                   asChild
                   className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
                 >
-                  <Link href="/start-learning">Start Learning</Link>
+                  <Link href={Routes.SignUp}>Start Learning</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -724,12 +713,13 @@ export default function Home() {
                 asChild
                 className="bg-white text-emerald-600 hover:bg-emerald-50"
               >
-                <Link href="/start-teaching">Become a Teacher</Link>
+                <Link href={Routes.SignUp}>Become a Teacher</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
     </div>
+   </AppLayout>
   );
 }

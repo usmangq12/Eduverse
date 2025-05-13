@@ -1,6 +1,6 @@
 export enum Routes {
     Home = "/",
-    SubmitSuccess = "/start-teaching/submit-success",
-    StartTeaching = "/start-teaching",
+    SubmitSuccess = `/submit-success`,
     TeacherDashboard = "/teacher/dashboard",
+    SignUp = "/signup"
 }

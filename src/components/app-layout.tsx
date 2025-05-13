@@ -6,22 +6,23 @@ import { AppHeader } from "@/components/app-header";
 import React from "react";
 import { ClusterChecker } from "@/components/cluster/cluster-ui";
 import { AccountChecker } from "@/components/account/account-ui";
-
-import { BookOpen, Home, LayoutDashboard, LucideIcon } from "lucide-react";
+import { Routes } from "@/lib/routes";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
+  const loginUser = "teacher";
   const links: {
     label: string;
     path: string;
-    Icon: LucideIcon;
   }[] = [
-    { label: "Home", path: "/", Icon: Home },
-    { label: "Teacher Dashboard", path: "/teacher/dashboard", Icon: LayoutDashboard },
-    { label: "Student Dashboard", path: "/student/dashboard", Icon: LayoutDashboard },
-    { label: "My Courses", path: "/courses", Icon: BookOpen },
+    { label: "Eduverse", path: Routes.Home },
+    {
+      label: " Dashboard",
+      path:
+        loginUser === "teacher" ? "/teacher/dashboard" : "/student/dashboard",
+    },
   ];
 
-  return (
+  return (  
     <ThemeProvider
       attribute="class"
       defaultTheme="system"
@@ -36,7 +37,6 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           </ClusterChecker>
           {children}
         </main>
-     
       </div>
       <Toaster />
     </ThemeProvider>
